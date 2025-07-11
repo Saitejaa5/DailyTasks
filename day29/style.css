@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadeInScale 0.5s ease;
+}
+
+.card.dark {
+  background: #333;
+  color: #fff;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Border Styles */
+.square { border-radius: 0; }
+.rounded { border-radius: 10px; }
+.circle { border-radius: 50%; }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left:0; top:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@keyframes fadeInScale {
+  from { opacity:0; transform:scale(0.9); }
+  to { opacity:1; transform:scale(1); }
+}
+
+@media(max-width:600px) {
+  #cardsContainer { justify-content: center; }
+  .card { width: 100%; }
+}
