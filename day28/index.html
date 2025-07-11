@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Multi-Event Countdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Event Countdown Tracker</h1>
+    <form id="eventForm">
+      <input type="text" id="title" placeholder="Event Title" required />
+      <textarea id="description" placeholder="Description (optional)"></textarea>
+      <input type="datetime-local" id="datetime" required />
+      <input type="email" id="email" placeholder="Email for reminder (optional)" />
+      <select id="category" required>
+        <option value="Birthday">🎂 Birthday</option>
+        <option value="Meeting">📊 Meeting</option>
+        <option value="Holiday">🏖️ Holiday</option>
+        <option value="Custom">📝 Custom</option>
+      </select>
+      <button type="submit">Add Event</button>
+    </form>
+
+    <div id="eventList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
